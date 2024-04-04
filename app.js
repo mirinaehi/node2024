@@ -3,7 +3,8 @@ const path = require('path')    // node에서 기본으로 제공하는 패키�
 const app = express()
 const port = 3000
 
-app.set('view engine', 'ejs');
+app.set('views', 'templates'); // 뷰 디렉토리를 'templates'로 설정
+app.set('view engine', 'ejs'); // 뷰 엔진을 EJS로 설정
 
 app.use('/html', express.static(path.join(__dirname,'html')))
 
